@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Anugrah Yadav — Portfolio
+   Anugrah Yadav — Portfolio (premium redesign)
    Stack: Pure vanilla JavaScript (no dependencies)
    --------------------------------------------------------------------------
    1. Helpers & environment
@@ -10,13 +10,19 @@
    6. Reveal-on-scroll (IntersectionObserver)
    7. Scrollspy (active nav link)
    8. Button ripple
-   9. Mouse parallax (hero)
-   10. Particle field (canvas)
+   9. Mouse parallax (hero visual)
+   10. Cursor spotlight (project cards)
+   11. Magnetic buttons
+   12. Particle field (canvas)
    ========================================================================== */
 
    (() => {
     'use strict';
-      document.documentElement.classList.replace('no-js', 'js');
+  
+    /* ------------------------------------------------------------------ */
+    /* 0. Flip the no-js flag (see CSS safety net section 18)             */
+    /* ------------------------------------------------------------------ */
+    document.documentElement.classList.replace('no-js', 'js');
   
     /* ------------------------------------------------------------------ */
     /* 1. Helpers & environment                                           */
@@ -31,7 +37,6 @@
     const yearEl = $('#year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   
-    // Stop placeholder "#" links from jumping to the top
     $$('a[href="#"]').forEach((a) =>
       a.addEventListener('click', (e) => e.preventDefault())
     );
@@ -68,7 +73,6 @@
       toggle.setAttribute('aria-expanded', String(open));
     });
   
-    // Close when a link is chosen, Escape is pressed, or viewport widens
     links.addEventListener('click', (e) => {
       if (e.target.closest('.nav__link')) closeMenu();
     });
@@ -83,7 +87,7 @@
     /* 5. Typing effect (hero roles)                                      */
     /* ------------------------------------------------------------------ */
     const typed = $('#typing');
-    const words = ['Startup Founder', 'UI/UX Designer', 'Developer', 'Student'];
+    const words = ['Startup Founder', 'UI/UX Designer', 'Software Engineer', 'Student'];
   
     if (reduced || !typed) {
       if (typed) typed.textContent = words.join(', ');
@@ -100,7 +104,7 @@
         let delay = deleting ? 38 : 85;
   
         if (!deleting && charIndex === word.length) {
-          delay = 1900;   // pause on a full word
+          delay = 1900;
           deleting = true;
         } else if (deleting && charIndex === 0) {
           deleting = false;
@@ -113,18 +117,18 @@
     }
   
     /* ------------------------------------------------------------------ */
-    /* 6. Reveal-on-scroll                                                */
+    /* 6. Reveal-on-scroll (staggered via CSS --reveal-delay)             */
     /* ------------------------------------------------------------------ */
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target); // animate once
+            revealObserver.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -6% 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
     );
     $$('[data-reveal]').forEach((el) => revealObserver.observe(el));
   
@@ -174,12 +178,7 @@
     const hero = $('#home');
     const visual = $('#heroVisual');
   
-    if (
-      hero &&
-      visual &&
-      !reduced &&
-      window.matchMedia('(pointer: fine)').matches
-    ) {
+    if (hero && visual && !reduced && window.matchMedia('(pointer: fine)').matches) {
       let targetX = 0, targetY = 0;
       let currentX = 0, currentY = 0;
   
@@ -209,7 +208,39 @@
     }
   
     /* ------------------------------------------------------------------ */
-    /* 10. Particle field (canvas)                                        */
+    /* 10. Cursor spotlight (project cards)                               */
+    /* ------------------------------------------------------------------ */
+    $$('.project__media').forEach((media) => {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
+  
+      media.addEventListener('mousemove', (e) => {
+        const rect = media.getBoundingClientRect();
+        media.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width) * 100 + '%');
+        media.style.setProperty('--my', ((e.clientY - rect.top) / rect.height) * 100 + '%');
+      });
+    });
+  
+    /* ------------------------------------------------------------------ */
+    /* 11. Magnetic buttons (subtle pull toward cursor)                   */
+    /* ------------------------------------------------------------------ */
+    $$('.btn--magnetic').forEach((btn) => {
+      if (!window.matchMedia('(pointer: fine)').matches || reduced) return;
+  
+      const strength = 0.3;
+  
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * strength;
+        const y = (e.clientY - rect.top - rect.height / 2) * strength;
+        btn.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  
+    /* ------------------------------------------------------------------ */
+    /* 12. Particle field (canvas)                                        */
     /* ------------------------------------------------------------------ */
     const canvas = $('#particles');
     if (canvas && !reduced) {
@@ -234,14 +265,14 @@
         canvas.style.height = H + 'px';
         ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   
-        const count = Math.min(70, Math.floor((W * H) / 22000));
+        const count = Math.min(60, Math.floor((W * H) / 26000));
         particles = Array.from({ length: count }, () => ({
           x: Math.random() * W,
           y: Math.random() * H,
-          r: Math.random() * 1.4 + 0.4,
-          vx: (Math.random() - 0.5) * 0.22,
-          vy: (Math.random() - 0.5) * 0.22,
-          alpha: Math.random() * 0.5 + 0.2,
+          r: Math.random() * 1.3 + 0.4,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: (Math.random() - 0.5) * 0.2,
+          alpha: Math.random() * 0.4 + 0.15,
           phase: Math.random() * Math.PI * 2,
           color: COLORS[Math.floor(Math.random() * COLORS.length)]
         }));
@@ -250,13 +281,11 @@
       const tick = () => {
         ctx.clearRect(0, 0, W, H);
   
-        // Drift + twinkle
         for (const p of particles) {
           p.x += p.vx;
           p.y += p.vy;
           p.phase += 0.02;
   
-          // wrap around edges
           if (p.x < -10) p.x = W + 10;
           if (p.x > W + 10) p.x = -10;
           if (p.y < -10) p.y = H + 10;
@@ -269,7 +298,6 @@
           ctx.fill();
         }
   
-        // Faint connecting lines between close neighbours
         ctx.lineWidth = 0.6;
         for (let i = 0; i < particles.length; i++) {
           for (let j = i + 1; j < particles.length; j++) {
@@ -277,7 +305,7 @@
             const dy = particles[i].y - particles[j].y;
             const dist = Math.hypot(dx, dy);
             if (dist < 110) {
-              ctx.strokeStyle = `rgba(255, 255, 255, ${((1 - dist / 110) * 0.07).toFixed(3)})`;
+              ctx.strokeStyle = `rgba(255, 255, 255, ${((1 - dist / 110) * 0.06).toFixed(3)})`;
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
@@ -292,7 +320,6 @@
       setup();
       tick();
   
-      // Debounced resize + pause when the tab is hidden
       let resizeTimer;
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);

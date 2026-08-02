@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anugrah Yadav — Startup Founder · UI/UX Designer · Developer</title>
-  <meta name="description" content="Anugrah Yadav is a startup founder, UI/UX designer and developer building AI-powered products that solve real-world problems." />
+  <title>Anugrah Yadav — Founder · Product Designer · Engineer</title>
+  <meta name="description" content="Anugrah Yadav is a startup founder, product designer and software engineer building AI-powered products that solve real-world problems." />
   <meta name="theme-color" content="#050505" />
 
-  <!-- Favicon (inline SVG, gradient A) -->
+  <!-- Favicon (inline SVG) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300D1FF'/%3E%3Cstop offset='1' stop-color='%237B61FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23050505'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E" />
 
   <!-- Fonts: Space Grotesk (display) + Inter (body) -->
@@ -19,10 +19,7 @@
 </head>
 <body>
 
-  <!-- Accessibility: skip link -->
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Scroll progress indicator -->
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- ================= BACKGROUND LAYERS ================= -->
@@ -50,7 +47,6 @@
       <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M12 3.4a6.2 6.2 0 0 0-3.7 11.2c.8.6 1.2 1.2 1.2 1.9h5c0-.7.4-1.3 1.2-1.9A6.2 6.2 0 0 0 12 3.4Z"/><path d="M9.4 19.6h5.2"/><path d="M10.4 21.4h3.2"/></symbol>
       <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3.6 8.2 4.4L12 12.4 3.8 8Z"/><path d="m3.8 12.4 8.2 4.4 8.2-4.4"/><path d="m3.8 16.8 8.2 4.4 8.2-4.4"/></symbol>
       <symbol id="i-pen" viewBox="0 0 24 24"><path d="m14.7 5.2 4.1 4.1L9.2 18.9l-4.8 1 1-4.8Z"/><path d="m12.7 7.2 4.1 4.1"/></symbol>
-      <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.1 0 1.7-.7 1.7-1.6 0-.8-.6-1.3-.6-2.1 0-1.1.9-1.9 2.1-1.9h1.3a4 4 0 0 0 4-4c0-3.9-4-7.4-8.5-7.4Z"/><circle cx="8.1" cy="10.2" r=".5" fill="currentColor" stroke="none"/><circle cx="12" cy="7.4" r=".5" fill="currentColor" stroke="none"/><circle cx="15.9" cy="10.2" r=".5" fill="currentColor" stroke="none"/></symbol>
       <symbol id="i-figma" viewBox="0 0 24 24"><path d="M9.6 3h2.4a2.2 2.2 0 0 1 0 4.4H9.6Z"/><circle cx="12" cy="5.2" r="2.2"/><path d="M9.6 7.4h2.4a2.2 2.2 0 0 1 0 4.4H9.6Z"/><path d="M9.6 11.8h2.4a2.2 2.2 0 0 1 0 4.4H9.6Z"/><circle cx="12" cy="14" r="2.2"/></symbol>
       <symbol id="i-cursor" viewBox="0 0 24 24"><path d="m5.5 4.2 5.9 14.6 2.2-6.5 6.5-2.2Z"/></symbol>
       <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2.4"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 3.5v17M14.5 3.5v17"/></symbol>
@@ -71,13 +67,13 @@
       <ul class="nav__links" id="navLinks">
         <li><a class="nav__link is-active" href="#home">Home</a></li>
         <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#journey">Journey</a></li>
         <li><a class="nav__link" href="#skills">Skills</a></li>
         <li><a class="nav__link" href="#projects">Projects</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
 
-      <a href="#contact" class="btn btn--glass nav__cta">Let's Talk</a>
+      <a href="#contact" class="btn btn--ghost nav__cta">Let's Talk</a>
 
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -99,27 +95,31 @@
           </h1>
 
           <p class="hero__roles" data-reveal style="--reveal-delay:.12s">
-            <span class="hero__roles-label">I'm a</span>
+            <span class="hero__roles-label">a</span>
             <span class="hero__typing" aria-hidden="true"><span id="typing"></span><span class="hero__caret"></span></span>
-            <span class="sr-only">I'm a Startup Founder, UI/UX Designer, Developer and Student.</span>
+            <span class="sr-only">Startup Founder, UI/UX Designer, Software Engineer and Student.</span>
           </p>
 
           <p class="hero__desc" data-reveal style="--reveal-delay:.18s">
-            I'm an entrepreneur passionate about building AI-powered products that solve real-world problems.
-            I enjoy designing intuitive interfaces, developing scalable software, and transforming ambitious
-            ideas into impactful digital experiences.
+            I'm an entrepreneur building AI-powered products that solve real problems.
+            I design intuitive interfaces, engineer scalable software, and turn ambitious
+            ideas into products people genuinely enjoy using.
           </p>
 
           <div class="hero__actions" data-reveal style="--reveal-delay:.24s">
-            <a href="#projects" class="btn btn--primary">
+            <a href="#projects" class="btn btn--primary btn--magnetic">
               View Projects
               <svg aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
-            <a href="#contact" class="btn btn--glass">Connect</a>
+            <a href="#contact" class="btn btn--ghost">Connect</a>
           </div>
+
+          <ul class="hero__tools" data-reveal style="--reveal-delay:.3s" aria-label="Tools and focus areas">
+            <li>Python</li><li>Figma</li><li>LLMs</li><li>Product Strategy</li><li>UI/UX</li>
+          </ul>
         </div>
 
-        <!-- Right: avatar with glowing animated rings + floating geometry -->
+        <!-- Right: orb with glowing rings + floating geometry -->
         <div class="hero__visual" id="heroVisual" data-reveal style="--reveal-delay:.15s">
           <div class="hero__glow" aria-hidden="true"></div>
           <div class="hero__pulse" aria-hidden="true"></div>
@@ -128,7 +128,7 @@
           <div class="hero__ring hero__ring--outer" aria-hidden="true"></div>
           <div class="hero__ring hero__ring--inner" aria-hidden="true"></div>
 
-          <figure class="hero__avatar" data-depth="6">
+          <figure class="hero__orb" data-depth="6">
             <span class="hero__initials">AY</span>
           </figure>
 
@@ -148,79 +148,126 @@
       <div class="container">
         <div class="section__head" data-reveal>
           <span class="section__tag">About</span>
-          <h2 class="section__title">About <span class="gradient-text">Me</span></h2>
-          <p class="section__sub">The person behind the pixels.</p>
+          <h2 class="section__title">Design, engineering &amp;<br /><span class="gradient-text">product thinking</span></h2>
+          <p class="section__sub">A decade of building at the intersection of design, software and AI.</p>
         </div>
 
-        <div class="glass-card about__card" data-reveal>
-          <p>Currently building my own <strong>startup focused on AI-powered financial intelligence</strong> solutions.</p>
-          <p>Over the past decade I have developed a deep passion for <strong>UI/UX design and web development</strong>.</p>
-          <p>My expertise spans <strong>interface design, frontend development, and software engineering</strong>.</p>
-          <p>I enjoy transforming complex ideas into <strong>elegant digital experiences</strong>.</p>
+        <div class="about__grid">
+          <div class="glass-card about__card" data-reveal>
+            <p>I am an entrepreneur passionate about designing products that solve meaningful problems through technology.</p>
+            <p>Over the past decade I have explored the intersection of design, software engineering and artificial intelligence.</p>
+            <p>My work combines product thinking, user experience and engineering to build scalable digital products that people genuinely enjoy using.</p>
+          </div>
+
+          <div class="glass-card role-card" data-reveal style="--reveal-delay:.1s">
+            <span class="role-card__label">Current Role</span>
+            <span class="role-card__monogram" aria-hidden="true">QA</span>
+            <h3 class="role-card__title">Founder &amp; Product Builder</h3>
+            <p class="role-card__org">Quantrelic Analytics</p>
+            <p class="role-card__desc">An AI-powered financial intelligence platform helping investors make smarter decisions.</p>
+            <span class="role-card__status"><span class="hero__pill-dot"></span>Building</span>
+          </div>
         </div>
 
         <div class="about__stats">
           <div class="glass-card stat" data-reveal>
             <span class="stat__value">10+</span>
-            <span class="stat__label">Years Designing</span>
+            <span class="stat__label">Years of Design Experience</span>
           </div>
           <div class="glass-card stat" data-reveal style="--reveal-delay:.08s">
             <span class="stat__value">Startup</span>
-            <span class="stat__label">Founder · Current Role</span>
+            <span class="stat__label">Founder — Currently Building</span>
           </div>
           <div class="glass-card stat" data-reveal style="--reveal-delay:.16s">
             <span class="stat__value">2</span>
-            <span class="stat__label">AI Product Prototypes</span>
+            <span class="stat__label">Working Product Prototypes</span>
           </div>
           <div class="glass-card stat" data-reveal style="--reveal-delay:.24s">
             <span class="stat__value">5+</span>
-            <span class="stat__label">Programming Languages</span>
+            <span class="stat__label">Core Technologies</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
-    <section class="section" id="experience">
+    <!-- ================= JOURNEY ================= -->
+    <section class="section" id="journey">
       <div class="container">
-        <div class="section__head" data-reveal>
-          <span class="section__tag">Experience</span>
-          <h2 class="section__title">Where I've <span class="gradient-text">Been</span></h2>
-          <p class="section__sub">A decade of designing, building and shipping.</p>
+        <div class="section__head section__head--center" data-reveal>
+          <span class="section__tag">Journey</span>
+          <h2 class="section__title">The road so <span class="gradient-text">far</span></h2>
+          <p class="section__sub">Every milestone, one step at a time — from first lines of code to founding a startup.</p>
         </div>
 
         <div class="timeline">
-          <article class="glass-card timeline__item" data-reveal>
-            <span class="timeline__period">Present</span>
-            <h3 class="timeline__role">Startup Founder</h3>
-            <span class="timeline__org">Founder &amp; Product Builder</span>
-            <ul class="timeline__points">
-              <li>Designed and developed AI-powered investment intelligence products.</li>
-              <li>Created multiple product prototypes.</li>
-              <li>Led product strategy and UI design.</li>
+
+          <article class="milestone" data-reveal="left">
+            <span class="milestone__num">01</span>
+            <span class="milestone__period">The beginning</span>
+            <h3 class="milestone__title">Started with HTML &amp; CSS</h3>
+            <p class="milestone__desc">Discovered web development at a young age and built static websites while learning the fundamentals of design, layouts and responsive interfaces.</p>
+          </article>
+
+          <article class="milestone" data-reveal="right">
+            <span class="milestone__num">02</span>
+            <span class="milestone__period">Design</span>
+            <h3 class="milestone__title">UI/UX Design</h3>
+            <p class="milestone__desc">Expanded into interface design using Figma and modern design systems.</p>
+            <ul class="milestone__chips">
+              <li class="chip">Design Systems</li><li class="chip">Wireframing</li><li class="chip">Prototyping</li>
+              <li class="chip">User Research</li><li class="chip">Interaction Design</li><li class="chip">Visual Hierarchy</li>
+              <li class="chip">Micro Interactions</li><li class="chip">Accessibility</li>
             </ul>
           </article>
 
-          <article class="glass-card timeline__item timeline__item--alt" data-reveal>
-            <span class="timeline__period">10+ Years</span>
-            <h3 class="timeline__role">UI/UX Designer</h3>
-            <span class="timeline__org">Design &amp; Product Craft</span>
-            <ul class="timeline__points">
-              <li>Designed interfaces since childhood.</li>
-              <li>Focused on usability and product thinking.</li>
+          <article class="milestone" data-reveal="left">
+            <span class="milestone__num">03</span>
+            <span class="milestone__period">Engineering</span>
+            <h3 class="milestone__title">Programming</h3>
+            <p class="milestone__desc">Moved beyond frontend into software engineering.</p>
+            <ul class="milestone__chips">
+              <li class="chip">Python</li><li class="chip">C</li><li class="chip">Java</li>
+              <li class="chip">Object Oriented Programming</li><li class="chip">Data Structures</li><li class="chip">Algorithms</li>
+              <li class="chip">Backend Architecture</li><li class="chip">API Design</li><li class="chip">Database Fundamentals</li>
             </ul>
           </article>
+
+          <article class="milestone" data-reveal="right">
+            <span class="milestone__num">04</span>
+            <span class="milestone__period">Frontier</span>
+            <h3 class="milestone__title">Artificial Intelligence</h3>
+            <p class="milestone__desc">Built expertise in the tools shaping the next decade.</p>
+            <ul class="milestone__chips">
+              <li class="chip">Machine Learning</li><li class="chip">Deep Learning</li><li class="chip">Prompt Engineering</li>
+              <li class="chip">AI Product Design</li><li class="chip">LLMs</li><li class="chip">RAG Systems</li>
+              <li class="chip">Vector Databases</li><li class="chip">AI Automation</li><li class="chip">AI Agents</li><li class="chip">Multimodal AI</li>
+            </ul>
+          </article>
+
+          <article class="milestone milestone--now" data-reveal="left">
+            <span class="milestone__num">05</span>
+            <span class="milestone__period">Present day</span>
+            <h3 class="milestone__title">Startup</h3>
+            <p class="milestone__desc">Currently building <strong>Quantrelic Analytics</strong> — an AI-powered financial intelligence platform focused on helping investors make smarter decisions through structured insights and intelligent workflows.</p>
+            <ul class="milestone__chips">
+              <li class="chip">AI Agents</li><li class="chip">LLMs</li><li class="chip">RAG</li>
+              <li class="chip">FinTech</li><li class="chip">Product Strategy</li>
+            </ul>
+          </article>
+
         </div>
+
+        <p class="timeline__end" data-reveal>The journey has <span class="gradient-text">just begun.</span></p>
       </div>
     </section>
 
     <!-- ================= SKILLS ================= -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section__head" data-reveal>
+        <div class="section__head section__head--center" data-reveal>
           <span class="section__tag">Skills</span>
-          <h2 class="section__title">Tools of the <span class="gradient-text">Trade</span></h2>
-          <p class="section__sub">A blend of design taste and engineering depth.</p>
+          <h2 class="section__title">Tools of the <span class="gradient-text">trade</span></h2>
+          <p class="section__sub">A blend of design taste, engineering depth and AI fluency.</p>
         </div>
 
         <div class="skills__grid">
@@ -229,103 +276,88 @@
           <div class="glass-card skill" data-reveal>
             <div class="skill__head">
               <span class="skill__icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span>
-              <h3 class="skill__category">Programming Languages</h3>
-            </div>
-            <div class="skill__rows">
-              <div class="skill__row" data-reveal style="--level:90%">
-                <svg aria-hidden="true"><use href="#i-code"/></svg><span class="skill__name">Python</span><span class="skill__pct">90%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:92%">
-                <svg aria-hidden="true"><use href="#i-html"/></svg><span class="skill__name">HTML5</span><span class="skill__pct">92%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:88%">
-                <svg aria-hidden="true"><use href="#i-css"/></svg><span class="skill__name">CSS3</span><span class="skill__pct">88%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:72%">
-                <svg aria-hidden="true"><use href="#i-java"/></svg><span class="skill__name">Java</span><span class="skill__pct">72%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:68%">
-                <svg aria-hidden="true"><use href="#i-c"/></svg><span class="skill__name">C</span><span class="skill__pct">68%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
+              <div>
+                <h3 class="skill__title">Programming Languages</h3>
+                <p class="skill__desc">The foundations — writing clean, efficient code across multiple languages.</p>
               </div>
             </div>
-          </div>
-
-          <!-- Frontend -->
-          <div class="glass-card skill" data-reveal style="--reveal-delay:.08s">
-            <div class="skill__head">
-              <span class="skill__icon"><svg aria-hidden="true"><use href="#i-layout"/></svg></span>
-              <h3 class="skill__category">Frontend</h3>
-            </div>
-            <div class="skill__rows">
-              <div class="skill__row" data-reveal style="--level:95%">
-                <svg aria-hidden="true"><use href="#i-device"/></svg><span class="skill__name">Responsive Design</span><span class="skill__pct">95%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:90%">
-                <svg aria-hidden="true"><use href="#i-spark"/></svg><span class="skill__name">Animations</span><span class="skill__pct">90%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:88%">
-                <svg aria-hidden="true"><use href="#i-a11y"/></svg><span class="skill__name">Accessibility</span><span class="skill__pct">88%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:96%">
-                <svg aria-hidden="true"><use href="#i-layout"/></svg><span class="skill__name">UI Design</span><span class="skill__pct">96%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="glass-card skill" data-reveal style="--reveal-delay:.16s">
-            <div class="skill__head">
-              <span class="skill__icon"><svg aria-hidden="true"><use href="#i-server"/></svg></span>
-              <h3 class="skill__category">Backend</h3>
-            </div>
-            <div class="skill__rows">
-              <div class="skill__row" data-reveal style="--level:85%">
-                <svg aria-hidden="true"><use href="#i-code"/></svg><span class="skill__name">Python</span><span class="skill__pct">85%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:92%">
-                <svg aria-hidden="true"><use href="#i-bulb"/></svg><span class="skill__name">Problem Solving</span><span class="skill__pct">92%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
-              <div class="skill__row" data-reveal style="--level:82%">
-                <svg aria-hidden="true"><use href="#i-layers"/></svg><span class="skill__name">Software Architecture</span><span class="skill__pct">82%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
+            <div class="skill__chips">
+              <div class="skill-chip" data-reveal><span class="skill-chip__name">Python</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.04s"><span class="skill-chip__name">Java</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:80%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.08s"><span class="skill-chip__name">C</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:75%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.12s"><span class="skill-chip__name">HTML5</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.16s"><span class="skill-chip__name">CSS3</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
             </div>
           </div>
 
           <!-- Design -->
-          <div class="glass-card skill" data-reveal style="--reveal-delay:.24s">
+          <div class="glass-card skill" data-reveal style="--reveal-delay:.06s">
             <div class="skill__head">
               <span class="skill__icon"><svg aria-hidden="true"><use href="#i-pen"/></svg></span>
-              <h3 class="skill__category">Design</h3>
+              <div>
+                <h3 class="skill__title">Design</h3>
+                <p class="skill__desc">Crafting interfaces people understand and enjoy, from wireframe to polished UI.</p>
+              </div>
             </div>
-            <div class="skill__rows">
-              <div class="skill__row" data-reveal style="--level:92%">
-                <svg aria-hidden="true"><use href="#i-figma"/></svg><span class="skill__name">Figma</span><span class="skill__pct">92%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
+            <div class="skill__chips">
+              <div class="skill-chip" data-reveal><span class="skill-chip__name">Figma</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.04s"><span class="skill-chip__name">UI Design</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.08s"><span class="skill-chip__name">UX Design</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.12s"><span class="skill-chip__name">Wireframing</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.16s"><span class="skill-chip__name">Prototyping</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:95%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="glass-card skill" data-reveal style="--reveal-delay:.12s">
+            <div class="skill__head">
+              <span class="skill__icon"><svg aria-hidden="true"><use href="#i-layout"/></svg></span>
+              <div>
+                <h3 class="skill__title">Frontend</h3>
+                <p class="skill__desc">Building fast, responsive and accessible experiences with modern web standards.</p>
               </div>
-              <div class="skill__row" data-reveal style="--level:95%">
-                <svg aria-hidden="true"><use href="#i-cursor"/></svg><span class="skill__name">UI/UX</span><span class="skill__pct">95%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
+            </div>
+            <div class="skill__chips">
+              <div class="skill-chip" data-reveal><span class="skill-chip__name">Responsive Design</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.04s"><span class="skill-chip__name">Animations</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:90%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.08s"><span class="skill-chip__name">Accessibility</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.12s"><span class="skill-chip__name">Performance</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card skill" data-reveal style="--reveal-delay:.18s">
+            <div class="skill__head">
+              <span class="skill__icon"><svg aria-hidden="true"><use href="#i-server"/></svg></span>
+              <div>
+                <h3 class="skill__title">Backend</h3>
+                <p class="skill__desc">Designing robust systems, APIs and data layers that scale with the product.</p>
               </div>
-              <div class="skill__row" data-reveal style="--level:90%">
-                <svg aria-hidden="true"><use href="#i-grid"/></svg><span class="skill__name">Wireframing</span><span class="skill__pct">90%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
+            </div>
+            <div class="skill__chips">
+              <div class="skill-chip" data-reveal><span class="skill-chip__name">API Development</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.04s"><span class="skill-chip__name">Software Architecture</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.08s"><span class="skill-chip__name">Databases</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:65%">★★★★★</b></span><span class="lvl lvl--mid">Intermediate</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.12s"><span class="skill-chip__name">Problem Solving</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+            </div>
+          </div>
+
+          <!-- Artificial Intelligence -->
+          <div class="glass-card skill skill--wide" data-reveal>
+            <div class="skill__head">
+              <span class="skill__icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span>
+              <div>
+                <h3 class="skill__title">Artificial Intelligence</h3>
+                <p class="skill__desc">Shipping AI products — from LLMs and RAG systems to agents and automation.</p>
               </div>
-              <div class="skill__row" data-reveal style="--level:91%">
-                <svg aria-hidden="true"><use href="#i-loop"/></svg><span class="skill__name">Prototyping</span><span class="skill__pct">91%</span>
-                <span class="skill__bar"><span class="skill__bar-fill"></span></span>
-              </div>
+            </div>
+            <div class="skill__chips">
+              <div class="skill-chip" data-reveal><span class="skill-chip__name">Machine Learning</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:80%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.04s"><span class="skill-chip__name">LLMs</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.08s"><span class="skill-chip__name">Prompt Engineering</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:100%">★★★★★</b></span><span class="lvl lvl--expert">Expert</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.12s"><span class="skill-chip__name">AI Agents</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:85%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.16s"><span class="skill-chip__name">RAG</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:80%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
+              <div class="skill-chip" data-reveal style="--reveal-delay:.2s"><span class="skill-chip__name">Vector Databases</span><span class="stars" aria-hidden="true"><i>★★★★★</i><b style="--pct:75%">★★★★★</b></span><span class="lvl lvl--adv">Advanced</span></div>
             </div>
           </div>
 
@@ -338,19 +370,17 @@
       <div class="container">
         <div class="section__head section__head--center" data-reveal>
           <span class="section__tag">Projects</span>
-          <h2 class="section__title">Selected <span class="gradient-text">Work</span></h2>
-          <p class="section__sub">A glimpse into the products I'm designing and building.</p>
+          <h2 class="section__title">Selected <span class="gradient-text">work</span></h2>
+          <p class="section__sub">Live prototypes — designed, engineered and shipped.</p>
         </div>
 
         <div class="projects__grid">
 
           <article class="project" data-reveal>
             <div class="project__media">
-              <span class="project__tag">Prototype 01</span>
+              <span class="project__status"><span class="hero__pill-dot"></span>Live</span>
               <div class="mock" aria-hidden="true">
-                <div class="mock__bar">
-                  <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
-                </div>
+                <div class="mock__bar"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span></div>
                 <div class="mock__body">
                   <div class="mock__chart">
                     <i style="--h:42%"></i><i style="--h:64%"></i><i style="--h:50%"></i><i style="--h:78%"></i><i style="--h:60%"></i><i style="--h:88%"></i><i style="--h:70%"></i>
@@ -360,12 +390,14 @@
               </div>
             </div>
             <div class="project__body">
-              <h3 class="project__title">Prototype One</h3>
-              <p class="project__desc">An AI-powered financial intelligence prototype that turns market data into clear, actionable insights — researched, wireframed and designed end-to-end.</p>
+              <h3 class="project__title">Equity Research Intelligence</h3>
+              <p class="project__desc">An AI-powered research platform that structures financial data into clear, decision-ready insights.</p>
+              <ul class="project__tags">
+                <li class="chip">Python</li><li class="chip">LLMs</li><li class="chip">Financial Data</li><li class="chip">Streamlit</li>
+              </ul>
               <div class="project__actions">
                 <a href="https://ai-equity-research-demo.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
-                  Visit Project
-                  <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+                  Visit Project <svg aria-hidden="true"><use href="#i-arrow"/></svg>
                 </a>
               </div>
             </div>
@@ -373,11 +405,9 @@
 
           <article class="project" data-reveal style="--reveal-delay:.12s">
             <div class="project__media">
-              <span class="project__tag">Prototype 02</span>
+              <span class="project__status"><span class="hero__pill-dot"></span>Live</span>
               <div class="mock mock--alt" aria-hidden="true">
-                <div class="mock__bar">
-                  <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
-                </div>
+                <div class="mock__bar"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span></div>
                 <div class="mock__body">
                   <div class="mock__chart">
                     <i style="--h:56%"></i><i style="--h:38%"></i><i style="--h:72%"></i><i style="--h:46%"></i><i style="--h:84%"></i><i style="--h:62%"></i>
@@ -387,12 +417,14 @@
               </div>
             </div>
             <div class="project__body">
-              <h3 class="project__title">Prototype Two</h3>
-              <p class="project__desc">A conversational, AI-first investing concept focused on reducing complexity — helping people make confident decisions through intuitive design.</p>
+              <h3 class="project__title">Quantrelic AI Copilot</h3>
+              <p class="project__desc">A conversational investing copilot that turns complex market questions into confident decisions.</p>
+              <ul class="project__tags">
+                <li class="chip">Python</li><li class="chip">AI Agents</li><li class="chip">RAG</li><li class="chip">Streamlit</li>
+              </ul>
               <div class="project__actions">
                 <a href="https://quantrelic-prototype-2-edyoaj2akimihhxp6trfup.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
-                  Visit Project
-                  <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+                  Visit Project <svg aria-hidden="true"><use href="#i-arrow"/></svg>
                 </a>
               </div>
             </div>
@@ -407,12 +439,11 @@
       <div class="container">
         <div class="section__head section__head--center" data-reveal>
           <span class="section__tag">Social</span>
-          <h2 class="section__title">Find Me <span class="gradient-text">Online</span></h2>
+          <h2 class="section__title">Find me <span class="gradient-text">online</span></h2>
           <p class="section__sub">Let's stay in touch beyond this page.</p>
         </div>
 
         <div class="social__grid">
-
           <a class="glass-card social-card social-card--linkedin" href="https://www.linkedin.com/in/anugrah-yadav-aba8372a6/" target="_blank" rel="noopener noreferrer" data-reveal>
             <span class="social-card__icon"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></span>
             <h3>LinkedIn</h3>
@@ -433,7 +464,6 @@
             <p>Have a project in mind or just want to say hi? I usually reply within 24 hours.</p>
             <span class="social-card__cta">Email Me <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
-
         </div>
       </div>
     </section>
@@ -445,12 +475,9 @@
           <div class="contact__content">
             <h2 class="contact__title">Interested in <span class="gradient-text">collaborating?</span></h2>
             <p class="contact__sub">Let's build something <span class="gradient-text">amazing</span> together.</p>
-            <div class="contact__cta">
-              <a href="mailto:anugrahyadav1594@gmail.com" class="btn btn--gradient btn--lg">
-                Get in Touch
-                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
-              </a>
-            </div>
+            <a href="mailto:anugrahyadav1594@gmail.com" class="btn btn--gradient btn--lg btn--magnetic">
+              Get in Touch <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
             <p class="contact__note">Usually replies within 24 hours</p>
           </div>
         </div>
@@ -463,11 +490,8 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year">2026</span> Anugrah Yadav. All rights reserved.</p>
-      <p>Made with HTML, CSS &amp; JavaScript.</p>
-      <a href="#home" class="footer__top">
-        Back to top
-        <svg aria-hidden="true"><use href="#i-arrow-up"/></svg>
-      </a>
+      <p>Designed &amp; built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#home" class="footer__top">Back to top <svg aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
     </div>
   </footer>
 
